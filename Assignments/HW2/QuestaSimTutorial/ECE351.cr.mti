@@ -1,0 +1,15 @@
+{N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/test_adder.v} {1 {vlog -work work -vopt -stats=none {N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/test_adder.v}
+QuestaSim-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} {N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/adder.v} {1 {vlog -work work -vopt -stats=none {N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/adder.v}
+QuestaSim-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module adder_3_RTL
+
+Top level modules:
+	adder_3_RTL
+
+} {} {}}

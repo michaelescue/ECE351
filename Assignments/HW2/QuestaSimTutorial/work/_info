@@ -1,0 +1,72 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dN:/
+T_opt
+!s110 1555356464
+VH9Ab_hjY@^oCQ5L<4Fmeo1
+Z0 04 4 4 work test fast 0
+=1-00101896bdb8-5cb4db30-50-2af4
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+Z2 OL;O;10.7b;67
+dN:/
+T_opt1
+!s110 1555356883
+VTkTnF`:m2ZoV8?j]ThZEN2
+R0
+=1-00101896bdb8-5cb4dcd3-11e-3350
+o-quiet -auto_acc_if_foreign -work work +acc
+R1
+n@_opt1
+R2
+vadder_3_RTL
+Z3 !s110 1555354707
+!i10b 1
+!s100 <DM[6`F]PkcCMjJdW]dYc0
+I7AJZ8BU2Gb1BiD2c0g[170
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 dN:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial
+Z6 w1555354377
+8N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/adder.v
+FN:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/adder.v
+L0 4
+Z7 OL;L;10.7b;67
+r1
+!s85 0
+31
+!s108 1555354706.000000
+!s107 N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/adder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/adder.v|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+nadder_3_@r@t@l
+vtest
+R3
+!i10b 1
+!s100 fHgDJfozYAMMUTibcMjE>3
+IC@bG@F:MLc??dal`ZHb_:2
+R4
+R5
+R6
+8N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/test_adder.v
+FN:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/test_adder.v
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1555354707.000000
+!s107 N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/test_adder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial/test_adder.v|
+!i113 0
+R8
+R1
