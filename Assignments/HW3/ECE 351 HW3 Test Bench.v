@@ -15,21 +15,20 @@
 *	
 **/
 
-/* Included files	*/
-`include "ECE 351 HW3 Moore FSM.v"
-
-/* Local connections	*/
-local reg out;	// redeclaration
-local reg r_wire;
-local reg clk;
-local wire reset;
-
+module moorestatemachine_testbench;
 
 /* size of stimulus	*/
-`define r_size 9;	
+parameter r_size = 9;
 
-/* Stimulus	assignments*/
-r_reg = `r_size/'b001011110;
+/* Local connections	*/
+  reg out;	// redeclaration
+  reg r_reg;
+  wire [(r_size -1 ):0] r_wire;
+  reg clk;
+ reg reset;	
+
+/* Stimulus	parameters	*/
+parameter r = 9'b001011110;
 
 /* laps	*/
 parameter laps = r_size;
@@ -40,25 +39,28 @@ parameter delay_off= 10;
 
 
 /* Module instantiation	*/
-module moorestatemachine #(.out(out), .r(r_wire), .clk(clk), .state_reset(reset)) statemachine;
+moorestatemachine statemachine(.out(out), .r(r_wire[0]), .clk(clk), .state_reset(reset));
 
+/* Internal connections	*/
+assign r_wire = r_reg;
 
 /* Logic	*/
 initial
 	begin
+	r_reg = r;
 	reset = 0;
 		repeat(laps)
 			begin
-				r_wire = r_wire << 1;
+				r_reg = r_reg << 1;
 			end
 	reset = 1;
 	end
 
-endmodule
-
 /* Clock Timing	*/
-always @(*)
+always
 	begin
 		#delay_on clk = 1;
 		#delay_off clk = 0;
 	end
+	
+endmodule

@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dN:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial
+vmoorestatemachine
+Z0 !s110 1556797887
+!i10b 1
+!s100 T7M`^o:I[JFUkcEQF=_gK0
+Ig@9YgK5CJI6^?[;T0nTPd3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dN:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/QuestaSim Projects
+w1556795771
+8N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Moore FSM.v
+FN:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Moore FSM.v
+L0 23
+Z3 OL;L;10.7b;67
+r1
+!s85 0
+31
+!s108 1556797886.000000
+!s107 N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Moore FSM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Moore FSM.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+vmoorestatemachine_testbench
+R0
+!i10b 1
+!s100 mfhNmCn9CloKm<<`PeH;Z0
+IG<WHgfbHj=5^kIj6JkD>T0
+R1
+R2
+w1556797883
+8N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Test Bench.v
+FN:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Test Bench.v
+L0 18
+R3
+r1
+!s85 0
+31
+!s108 1556797887.000000
+!s107 N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Test Bench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Test Bench.v|
+!i113 0
+R4
+R5

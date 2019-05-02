@@ -29,7 +29,7 @@ reg [3:0] current_state; // state registers
 reg [3:0] next_state;
 
 /* Logic	*/
-always @(r OR current_state)
+always @(r or current_state)
 	case (current_state)
 		A:	begin 
 					out = 0;
@@ -56,15 +56,15 @@ always @(r OR current_state)
 					if(r) next_state = C;
 					else next_state = B; 
 			end
-	endcase;
+	endcase
 	
 /* Registers	*/
-always @(posedge clk OR state_reset)
+always @(posedge clk or state_reset)
 	begin
 		if (state_reset)
 			begin
 				current_state = A;
-				out = 0
+				out = 0;
 			end
 		else current_state = next_state;
 	end
