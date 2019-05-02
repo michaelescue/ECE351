@@ -25,3 +25,7 @@ Synthesis:
 	- 	The description is typically RTL code (Data flow level of abstraction).
 	
 	-	A constraint file is required.
+	
+	-	Architectural description is you system specification.
+	
+	-	
