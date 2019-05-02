@@ -48,8 +48,8 @@ assign r_wire = r_reg;
 initial
 	begin
 	r_reg = r;
-	reset = 0;
 	#15 reset = 1;
+	#15 reset = 0;
 		repeat(laps)
 			begin
 				
