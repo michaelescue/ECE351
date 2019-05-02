@@ -9,16 +9,16 @@ z2
 cModel Technology
 dN:/My Documents/2019/Spring 2019/ECE351/Assignments/HW2/QuestaSimTutorial
 T_opt
-!s110 1556799095
-VO@SZl=SKO3^=H9o9a47GZ1
+!s110 1556826705
+V^>FK`TJJRbKooND@hm0B13
 04 27 4 work moorestatemachine_testbench fast 0
-=1-00101896bdb8-5ccade76-327-4e2c
+=1-00101896bdb8-5ccb4a50-329-2794
 o-quiet -auto_acc_if_foreign -work work +acc
 Z0 tCvgOpt 0
 n@_opt
 OL;O;10.7b;67
 vmoorestatemachine
-Z1 !s110 1556799080
+Z1 !s110 1556826688
 !i10b 1
 !s100 T7M`^o:I[JFUkcEQF=_gK0
 Ig@9YgK5CJI6^?[;T0nTPd3
@@ -32,7 +32,7 @@ Z4 OL;L;10.7b;67
 r1
 !s85 0
 31
-Z5 !s108 1556799080.000000
+Z5 !s108 1556826688.000000
 !s107 N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Moore FSM.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Moore FSM.v|
 !i113 0
@@ -41,11 +41,11 @@ R0
 vmoorestatemachine_testbench
 R1
 !i10b 1
-!s100 9<gbzaPVEbMF6ZQ8k32T60
-ISTgG;Bg91WCdeLn<4hboN1
+!s100 :9JO_WOXb8JTL`1H:en3B2
+II5S200EmbFAb3<A0NPbMl0
 R2
 R3
-w1556799046
+w1556826683
 8N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Test Bench.v
 FN:/My Documents/2019/Spring 2019/ECE351/Assignments/HW3/ECE 351 HW3 Test Bench.v
 L0 18

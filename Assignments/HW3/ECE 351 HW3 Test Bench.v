@@ -21,11 +21,11 @@ module moorestatemachine_testbench;
 parameter r_size = 9;
 
 /* Local connections	*/
-  wire out;	// redeclaration
-  reg r_reg;
+  wire out;	
+  reg [(r_size -1 ):0] r_reg;
   wire [(r_size -1 ):0] r_wire;
   reg clk;
- reg reset;	
+  reg reset;	
 
 /* Stimulus	parameters	*/
 parameter r = 9'b001011110;
@@ -39,7 +39,7 @@ parameter delay_off= 10;
 
 
 /* Module instantiation	*/
-moorestatemachine statemachine(.out(out), .r(r_wire[0]), .clk(clk), .state_reset(reset));
+moorestatemachine statemachine(.out(out), .r(r_wire[r_size-1]), .clk(clk), .state_reset(reset));
 
 /* Internal connections	*/
 assign r_wire = r_reg;
@@ -48,13 +48,15 @@ assign r_wire = r_reg;
 initial
 	begin
 	r_reg = r;
-	reset = 0;
+	#15 reset = 1;
+	#15 reset = 0;
 		repeat(laps)
 			begin
-				r_reg = r_reg << 1;
+				
+				# 30 r_reg = r_reg << 1;
 				$display("r_reg = %b\n", r_reg);
 			end
-	reset = 1;
+	#30 reset = 1;
 	$finish;
 	end
 
