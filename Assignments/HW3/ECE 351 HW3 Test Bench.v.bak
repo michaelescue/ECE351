@@ -52,7 +52,6 @@ initial
 		repeat(laps)
 			begin
 				r_reg = r_reg << 1;
-				$display("r_reg = %b\n", r_reg);
 			end
 	reset = 1;
 	$finish;
