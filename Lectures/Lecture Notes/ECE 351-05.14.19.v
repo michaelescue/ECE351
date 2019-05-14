@@ -313,7 +313,9 @@ Core Generator Video
 	
 		+	The IP Center contains new cores to download and install.
 		
-	
+-	Behavioral SImulation Wrapper files
+
+	>	
 	
 	
 	
