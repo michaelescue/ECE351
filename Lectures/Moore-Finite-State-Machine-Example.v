@@ -15,7 +15,7 @@ parameter zero = 0, one1 = 1, two1s = 2	// State assignments
 reg [1:0] state; // state registers
 reg [1:0] next_state;
 
-always @(r OR state)
+always @(state)		// Previously was r or state and this was wrong.
 	case (state)
 		zero:	begin 
 					out = 0;

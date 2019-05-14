@@ -1,6 +1,6 @@
 ECE 351
 Professor Greenwood	“somebody who doesn’t know the answer tell me…”
-05/07/19
+05/09/19
 
 -	Coding style plays an important role in utilizing an FPGA resources.
 
@@ -88,4 +88,91 @@ Video on Basic HDL Coding Techniques:
 
 	>	If it isn't dependent on a clock signal, it is asynchronous.
 	
+-	Summary
 
+	>	Use as much of the dedicated hardware resources as possible to ensure optimum speed and devie utilization.
+	
+		+	Saves on FPGA Fabric resources (LUTs, CLBs).
+	
+	>	Plan on instantiating clocking and memory resources.
+	
+	>	Try to use the Core Generator tool to create optimized components that target dedicated FPGA resources:
+		
+		+	BRAM
+		
+		+	DSP48E
+		
+		+	FIFO
+		
+	>	Maintain your design hierarchy to make debugging, simulation, and report generation easier.
+	
+	>	CASE and IF/THEN statements produce different types of multiplexers.
+	
+		+	CASE statements tend to build logic in parallel while IF/THEN statements tend to build priority encoders.
+		
+	>	Avoid nested CASE and IF/THEN statements.
+	
+	>	You should always build a synchronous design for your FPGA.
+	
+	>	Inferring many types of flilp-flops from HDL code is possible.
+	
+		+	Synchronous sets and resets are preferred.
+		
+	>	Put the next-state logic in one CASE statment.
+	
+		+	The state register can also be included here or in a seperate process block or always block.
+		
+	>	Put the State Machine Outputs in a seperate process or always block.
+	
+		+	Prevents resource sharing, which can hurt performance.
+		
+-	Ther perfect State Machine
+
+	>	Inputs:
+	
+		+	Input signals and state jumps.
+		
+	>	Outputs:
+	
+		+	Output states, control signals, and enable signals to the rest of the design.
+		
+	>	NO:
+	
+		+	Arithmetic logic, datapaths, or combinatiorial functions inside the state machine.
+		
+-	State Machine Encoding
+
+	>	Use enumerated types to define state vectors (VHDL).
+	
+		+	Most synthesis tools have commands to extract and re-encode state machines described in this way.
+		
+	>	Use one-hot encoding for high-performance state machies.
+	
+		+	Uses more registers, but simplifies next-state logic.
+		
+		+	Examine trade-offs:	Gray and Johnson encoding styles can also improve performance.
+		
+		+	Refer to the ocumentation of your synthesis tool to determine how your synthesis tool chooses the default encoding scheme.
+		
+	>	Register state machine outputs for higher performance.
+	
+-	Three situations in which to pipeline:
+
+	1.	Register I/O
+	
+		+	Usually done by the designer from the beginning.
+		
+	2.	Register the outputs of each lower leaf-level output.
+	
+		+	Typically done after timing analysis.
+		
+		+	Can easily be done for purely combinational components.
+		
+	3.	Register high-fanout secondary control signals:
+	
+		+	Set.
+		
+		+	Reset.
+		
+		+	CEs.
+		
