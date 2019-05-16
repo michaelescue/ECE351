@@ -1,0 +1,175 @@
+CRITICAL WARNING: [Common 17-183] Failed to open handle vivado.jou. Please check access permission of directory 'C:\Windows\System32'. You should restart the application from a writable working directory.
+CRITICAL WARNING: [Common 17-183] Failed to open handle vivado.log. Please check access permission of directory 'C:\Windows\System32'. You should restart the application from a writable working directory.
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Thu May  9 12:39:16 2019
+# Process ID: 5428
+# Current directory: C:/Windows/System32
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6456
+# Log file: C:/Windows/System32/vivado.log
+# Journal file: C:/Windows/System32\vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project HW4_Tutorial {N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/HW4_Tutorial} -part xc7a100tcsg324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 746.523 ; gain = 48.180
+add_files -norecurse {{N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/nexys4fpga.v} {N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/decade.v} {N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/sevensegment.v} {N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/clk_divider.v}}
+add_files -fileset constrs_1 -norecurse {{N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/n4DDRfpga.xdc}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: Nexys4fpga
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 865.855 ; gain = 104.844
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Nexys4fpga' [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/nexys4fpga.v:35]
+	Parameter SIMULATE bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clk_divider' [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/clk_divider.v:13]
+	Parameter CLK_INPUT_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter TICK_OUT_FREQ_HZ bound to: 1 - type: integer 
+	Parameter SIMULATE bound to: 0 - type: integer 
+	Parameter CLK_COUNTS bound to: 32'b00000101111101011110000100000000 
+	Parameter clk_top_count bound to: 32'b00000101111101011110000011111111 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider' (1#1) [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/clk_divider.v:13]
+INFO: [Synth 8-6157] synthesizing module 'Decade' [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/decade.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Decade' (2#1) [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/decade.v:2]
+INFO: [Synth 8-6157] synthesizing module 'sevensegment' [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/sevensegment.v:35]
+	Parameter CLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter REFRESH_FREQUENCY_HZ bound to: 500 - type: integer 
+	Parameter RESET_POLARITY_LOW bound to: 0 - type: integer 
+	Parameter CNTR_WIDTH bound to: 32 - type: integer 
+	Parameter SIMULATE bound to: 0 - type: integer 
+	Parameter SIMULATE_FREQUENCY_CNT bound to: 5 - type: integer 
+	Parameter digit1 bound to: 8'b11111110 
+	Parameter digit2 bound to: 8'b11111101 
+	Parameter digit3 bound to: 8'b11111011 
+	Parameter digit4 bound to: 8'b11110111 
+	Parameter digit5 bound to: 8'b11101111 
+	Parameter digit6 bound to: 8'b11011111 
+	Parameter digit7 bound to: 8'b10111111 
+	Parameter digit8 bound to: 8'b01111111 
+INFO: [Synth 8-6157] synthesizing module 'Digit' [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/sevensegment.v:196]
+	Parameter zero bound to: 7'b1000000 
+	Parameter one bound to: 7'b1111001 
+	Parameter two bound to: 7'b0100100 
+	Parameter three bound to: 7'b0110000 
+	Parameter four bound to: 7'b0011001 
+	Parameter five bound to: 7'b0010010 
+	Parameter six bound to: 7'b0000010 
+	Parameter seven bound to: 7'b1111000 
+	Parameter eight bound to: 7'b0000000 
+	Parameter nine bound to: 7'b0010000 
+	Parameter A bound to: 7'b0001000 
+	Parameter B bound to: 7'b0000011 
+	Parameter C bound to: 7'b1000110 
+	Parameter D bound to: 7'b0100001 
+	Parameter E bound to: 7'b0000110 
+	Parameter F bound to: 7'b0001110 
+	Parameter seg_a bound to: 7'b1111110 
+	Parameter seg_b bound to: 7'b1111101 
+	Parameter seg_c bound to: 7'b1111011 
+	Parameter seg_d bound to: 7'b1110111 
+	Parameter seg_e bound to: 7'b1101111 
+	Parameter seg_f bound to: 7'b1011111 
+	Parameter seg_g bound to: 7'b0111111 
+	Parameter upH bound to: 7'b0001001 
+	Parameter upL bound to: 7'b1000111 
+	Parameter upR bound to: 7'b0001000 
+	Parameter lol bound to: 7'b1001111 
+	Parameter lor bound to: 7'b0101111 
+	Parameter blank bound to: 7'b1111111 
+INFO: [Synth 8-6155] done synthesizing module 'Digit' (3#1) [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/sevensegment.v:196]
+INFO: [Synth 8-6155] done synthesizing module 'sevensegment' (4#1) [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/sevensegment.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'Nexys4fpga' (5#1) [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/nexys4fpga.v:35]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 920.906 ; gain = 159.895
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 920.906 ; gain = 159.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 920.906 ; gain = 159.895
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/n4DDRfpga.xdc]
+Finished Parsing XDC File [N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/n4DDRfpga.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1288.258 ; gain = 527.246
+14 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1288.258 ; gain = 527.246
+write_schematic -format pdf -orientation portrait N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/schematic.pdf
+ERROR: [Common 17-165] Too many positional options when parsing '2019/ECE351/Assignments/HW4/schematic.pdf', please type 'write_schematic -help' for usage info.
+write_schematic -format pdf -orientation landscape N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/schematic.pdf
+ERROR: [Common 17-165] Too many positional options when parsing '2019/ECE351/Assignments/HW4/schematic.pdf', please type 'write_schematic -help' for usage info.
+write_schematic -format pdf -orientation portrait \\khensu\Home06\mescue\Desktop\schematic.pdf
+WARNING: [Vivado 12-3279] write_schematic failed. Parent directory for  'C:/khensuHome06mescueDesktopschematic.pdf'  does not have write permission.
+launch_runs synth_1 -jobs 2
+[Thu May  9 12:49:12 2019] Launched synth_1...
+Run output will be captured here: N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/HW4_Tutorial/HW4_Tutorial.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Thu May  9 12:50:09 2019] Launched impl_1...
+Run output will be captured here: N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/HW4_Tutorial/HW4_Tutorial.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu May  9 12:52:38 2019] Launched impl_1...
+Run output will be captured here: N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/HW4_Tutorial/HW4_Tutorial.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2.1
+  **** Build date : Jul 26 2018-19:38:10
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292743024A
+set_property PROGRAM.FILE {N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/HW4_Tutorial/HW4_Tutorial.runs/impl_1/Nexys4fpga.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {N:/My Documents/2019/Spring 2019/ECE351/Assignments/HW4/HW4_Tutorial/HW4_Tutorial.runs/impl_1/Nexys4fpga.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
