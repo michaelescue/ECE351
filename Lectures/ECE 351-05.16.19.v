@@ -85,3 +85,86 @@ Xilinx FPGA Terminology.
 -	Rocket IO Transceiver
 
 	>	Serial data communication without having to build one.
+	
+Inferring Distributed RAM
+
+	module ramtest(z, raddr, d, waddr, we, clk);
+	output [3:0] z;
+	input [3;0] d;
+	input [3:0] raddr, waddr;
+	input we;
+	input clk;
+	
+	reg {3:0] mem [7:0];
+	
+	assign z = mem[raddr];
+	always @(posedge clk) begin
+	...
+	..
+	.
+	
+	
+Inferring Distributed Dual Port RAM
+
+	module ram16x8(z, raddr, d, waddr, we, clk);
+	output [7:0] z;
+	input [7:0] d;
+	input [3:0] raddr, waddr;
+	input we;
+	input clk;
+	reg [7:0] z;
+	reg [7:0] mem0, mem1, mem2, mem3, mem4.......
+	....
+	...
+	..
+	.
+	justalways @(posedge clk) begin
+	if(we)
+		begin
+		
+		
+Inferring Block RAM
+
+-	The read address or the output must be registered.
+
+-	Both the read address and output address must be registered. ????????????????????????????????
+
+
+Byte Wide Write Enable
+
+-	Write 8-bit portions of incoming data.
+
+-	Byte slectable, not all bits are required.
+
+-	Each byte is associated with a parity bit.
+
+	>	Hence 36Kbytes of RAM.
+	
+	
+ROM
+
+-	Can be inferred from a case statement where all assigned contexts are constant values.
+
+-	In Synplicity, a synthesis directive is necessary.
+
+
+FSM in Block Ram
+
+-	...
+
+
+Shift Register LUT
+
+-	Inferred by:
+
+	always @(posedge C)
+	begin
+		Q_INT <= {Q_INT[14:01], D};
+	end
+	
+	always @(Q_INT)
+	begin
+	
+		Q <= Q_INT[15];
+	end
+	
